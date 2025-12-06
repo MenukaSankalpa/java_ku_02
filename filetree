@@ -1,0 +1,59 @@
+src/
+  core/
+    _2524764_Book.java
+    _2524764_User.java
+    _2524764_StudentUser.java
+    _2524764_FacultyUser.java
+    _2524764_GuestUser.java
+    _2524764_Librarian.java
+    _2524764_BorrowRecord.java
+    _2524764_Reservation.java
+    _2524764_LibrarySystem.java
+
+  state/
+    _2524764_BookState.java
+    _2524764_AvailableState.java
+    _2524764_BorrowedState.java
+    _2524764_ReservedState.java
+
+  strategy/
+    _2524764_FineStrategy.java
+    _2524764_StudentFine.java
+    _2524764_FacultyFine.java
+    _2524764_GuestFine.java
+
+  observer/
+    _2524764_Observer.java
+    _2524764_Subject.java
+    _2524764_UserObserver.java
+
+  command/
+    _2524764_Command.java
+    _2524764_BorrowCommand.java
+    _2524764_ReturnCommand.java
+    _2524764_ReserveCommand.java
+    _2524764_CommandInvoker.java
+
+  builder/
+    _2524764_ComplexBook.java
+    _2524764_BookBuilder.java
+
+  decorator/
+    _2524764_BookDecorator.java
+    _2524764_FeaturedBook.java
+    _2524764_RecommendedBook.java
+    _2524764_SpecialEditionBook.java
+
+  reports/
+    _2524764_ReportGenerator.java
+
+  ui/
+    ModernUI.java
+    MainDashboardView.java
+    BooksView.java
+    UsersView.java
+    BorrowReturnView.java
+    ReportsView.java
+
+resources/
+  styles.css
