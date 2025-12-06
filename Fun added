@@ -1,0 +1,55 @@
+Functional Modules (25 marks)
+
+You MUST implement:
+
+✅ User Management
+
+Add user
+
+View user
+
+View borrowed history
+
+✅ Book Management
+
+Add book
+
+Update book
+
+Remove book
+
+Display book list
+
+✅ Borrowing System
+
+Check borrowing limit
+
+Check book availability
+
+Assign due date
+
+Update status via State pattern
+
+Create BorrowRecord
+
+✅ Returning System
+
+Calculate fine using Strategy pattern
+
+Update book state
+
+Notify reserved users using Observer pattern
+
+✅ Reservations
+
+Add reservation
+
+Notify user using Observer pattern
+
+✅ Reports
+
+Most borrowed books
+
+Overdue books
+
+Active borrowers
