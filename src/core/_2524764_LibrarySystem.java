@@ -75,4 +75,17 @@ public class _2524764_LibrarySystem {
             System.out.println("Reservation allowed only when book is borrowed.");
         }
     }
+
+    // ADD THIS METHOD inside _2524764_LibrarySystem
+    public List<_2524764_BorrowRecord> getBorrowHistory(String userId) {
+        List<_2524764_BorrowRecord> history = new ArrayList<>();
+
+        for (_2524764_BorrowRecord r : borrowRecords) {
+            if (r.getUser().getUserId().equals(userId)) {
+                history.add(r);
+            }
+        }
+        return history;
+    }
+
 }
