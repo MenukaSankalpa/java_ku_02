@@ -1,13 +1,52 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+package ui;
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
+
+import core._2524764_LibrarySystem;
+import core._2524764_Book;
+import core._2524764_StudentUser;
+import core._2524764_FacultyUser;
+import core._2524764_GuestUser;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class ModernUI extends Application {
+
+    private _2524764_LibrarySystem librarySystem;
+    private MainDashboardView dashboardView;
+
+    @Override
+    public void start(Stage primaryStage) {
+        librarySystem = new _2524764_LibrarySystem();
+
+        // Seed demo data
+        seedDemoData();
+
+        dashboardView = new MainDashboardView(librarySystem);
+
+        Scene scene = new Scene(dashboardView.getRoot(), 1100, 650);
+        scene.getStylesheets().add(
+                getClass().getResource("../css/style.css").toExternalForm()
+        );
+
+        primaryStage.setTitle("Smart Library Management System - _2524764");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    private void seedDemoData() {
+        // Add some demo books (4 parameters: bookId, title, author, category)
+        librarySystem.addBook(new _2524764_Book("B001", "Java Programming", "John Doe", "Programming"));
+        librarySystem.addBook(new _2524764_Book("B002", "Data Structures", "Jane Smith", "Computer Science"));
+        librarySystem.addBook(new _2524764_Book("B003", "Algorithms", "Robert Martin", "Computer Science"));
+
+        // Add some demo users
+        librarySystem.addUser(new _2524764_StudentUser("U001", "Alice"));
+        librarySystem.addUser(new _2524764_FacultyUser("U002", "Dr. Bob"));
+        librarySystem.addUser(new _2524764_GuestUser("U003", "Charlie"));
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
